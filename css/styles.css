@@ -133,3 +133,38 @@ main .main-buttons button:hover {
     border: 1px solid #c6c6c6;
     color: #222;
 }
+
+footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    display: grid;
+    font-size: 14px;
+    position: absolute;
+    align-items: center;
+    background-color: #f2f2f2;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid #e4e4e4;
+}
+
+footer ul {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    margin: 2px 10px 0;
+}
+
+footer .footer-left {
+    justify-self: left;
+}
+
+footer .footer-right {
+    justify-self: right;
+}
+
+footer ul li a {
+    margin: 10px;
+    color: #5f6368;
+}
