@@ -37,13 +37,99 @@ nav .nav-right-section a {
 nav .nav-right-section .menu-icon {
     width: 25px;
     height: 25px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     background-image: url('https://static.thenounproject.com/png/756729-200.png');
 }
 
 nav .nav-right-section img {
     margin-left: 10px;
     border-radius: 50%;
+}
+
+main {
+    margin-top: 90px;
+    text-align: center;
+}
+
+main .main-logo {
+    width: 272px;
+    height: 92px;
+    margin: 0 auto 35px;
+}
+
+main .main-logo img {
+    width: 100%;
+}
+
+main .main-input {
+    width: 530px;
+    margin: 0 auto 35px;
+}
+
+main .main-input-container {
+    width: 582px;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    justify-content: center;
+    border: 1px solid #eeeff1;
+}
+
+main .main-input input {
+    width: 487px;
+    height: 34px;
+    border: none;
+    outline: none;
+}
+
+main .main-input-container:hover {
+    border-color: rgba(223,225,229,0);
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+}
+
+.icon {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main .main-input .search-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png');
+}
+
+main .main-input .microphone-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png');
+}
+
+main .main-buttons {
+    width: 570px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+main .main-buttons div {
+    display: inline-block;
+}
+
+main .main-buttons button {
+    height: 36px;
+    padding: 0 15px;
+    min-width: 54px;
+    font-size: 14px;
+    margin: 11px 4px;
+    color: #5F6368;
+    border-radius: 4px;
+    border: 1px solid #f2f2f2;
+    background-color: #f2f2f2;
+}
+
+main .main-buttons button:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background-color: #f8f8f8;
+    border: 1px solid #c6c6c6;
+    color: #222;
 }
