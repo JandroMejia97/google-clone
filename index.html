@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Clone</title>
-    <link rel="shortcut icon" href="assets/images/unnamed.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="assets/images/unnamed.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 <body>
     <header>
@@ -35,19 +36,19 @@
         <section class="main-input">
             <div class="main-input-container">
                 <span class="icon search-icon"></span>
-                <input type="text">
-                <a class="icon microphone-icon" href="#">
-                </a>
+                <input type="text" id="searchValue">
+                <button type="button" class="icon microphone-icon" onclick="voiceSearchModalOpen()">
+                </button>
             </div>
         </section>
         <section class="main-buttons">
             <div>
-                <button>
+                <button type="button" onclick="searchValue()">
                     Buscar con Google
                 </button>
             </div>
             <div>
-                <button>
+                <button type="button" onclick="luck()">
                     Me siento con suerte
                 </button>
             </div>
@@ -103,5 +104,19 @@
             </li>
         </ul>
     </footer>
+    <div class="modal-voice-search hide-modal">
+        <button onclick="voiceSearchModalClose()" class="voice-search-close-modal">
+            ×
+        </button>
+		<div class="voice-search-result">
+			<p contenteditable class="voice-search-result-text"></p>
+		</div>
+		<div class="voice-search-animation">
+			<span class="voice-search-microphone-icon fas fa-microphone"></span>
+			<span class="voice-search-microphone-border"></span>
+		</div>
+	</div>
+    <script src="js/search.js"></script>
+    <script src="js/voice-search.js"></script>
 </body>
 </html>

@@ -96,17 +96,26 @@ main .main-input-container:hover {
     background-position: center;
     background-repeat: no-repeat;
 }
+.main-input .icon {
+    width: 20px;
+    height: 20px;
+}
+
+main .main-input button {
+    border: none;
+    background-color: transparent;
+}
 
 main .main-input .search-icon {
-    width: 24px;
-    height: 24px;
+    padding-right: 13px;
+    background-position: left center;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png');
 }
 
 main .main-input .microphone-icon {
-    width: 24px;
-    height: 24px;
+    padding: 0 8px;
     cursor: pointer;
+    background-position: right center;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png');
 }
 
@@ -190,4 +199,116 @@ footer .footer-right {
 footer ul li a {
     margin: 10px;
     color: #5f6368;
+}
+
+.modal-voice-search {
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.show-modal {
+    display: flex;
+    animation: aparecer 0.5s forwards;
+}
+
+.hide-modal {
+    display: none;
+}
+
+.hide-modal-transition {
+    animation: desaparecer 0.25s forwards;
+}
+.voice-search-result, .voice-search-animation {
+    width: 40vw;
+	height: 100vh;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.voice-search-result-text {
+	color: #666;
+	font-size: 34px;
+}
+
+.voice-search-microphone-icon {
+	width: 180px;
+	color: #f44;
+	height: 180px;
+	font-size: 80px;
+	border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex !important;
+	background-color: #fff;
+	box-shadow: 1px 1px 5px #ccc;
+	transition: color .12s, background-color .12s;
+}
+
+.voice-search-microphone-icon:hover {
+	color: #fff;
+	background-color: #f44;
+}
+
+.voice-search-microphone-border {
+    width: 180px;
+	height: 180px;
+	position: absolute;
+	text-align: center;
+	border-radius: 50%;
+	border: 0 solid #ccc;
+	box-sizing: content-box;
+	transition: border-width .13s;
+}
+
+.voice-search-microphone-border:hover {
+	border-width: 70px;
+}
+
+.voice-search-close-modal {
+	background: none;
+    border: none;
+    color: #777;
+    cursor: pointer;
+    font-size: 26px;
+    right: 0;
+    height: 11px;
+    line-height: 15px;
+    margin: 15px;
+    opacity: .6;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 15px;
+    z-index: 10;
+}
+.escuchando {
+    transition: -webkit-transform 0.174s ease-in-out 0s;
+    transform: scale(0.973335);
+}
+
+@keyframes aparecer {
+	0% {
+		opacity: 0
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes desaparecer {
+	0% {
+		opacity: 1
+	}
+	100% {
+		opacity: 0;
+	}
 }
